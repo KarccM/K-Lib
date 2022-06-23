@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import LeftSide from './Containers/LeftSide';
+import RightSide from './Containers/RightSide';
+import MiddleSide from './Containers/MiddleSide';
+import Nav from './Containers/Nav';
+import classes from './main.module.css';
+import RefEx from './Containers/RefEx';
 
-function App() {
+// Assume i know post-id then i should pass it as props for components
+// Assume i don't have loading for each comp
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Nav />
+      <div className="grid grid-cols-4 p-20">
+        <div className={`${classes.left}`}>
+          <LeftSide />
+        </div>
+        <div className={`col-span-3 ${classes.right}`}>
+          <MiddleSide />
+          <RightSide />
+        </div>
+      </div>
+      {/* <RefEx /> */}
+    </>
   );
-}
+};
 
 export default App;
