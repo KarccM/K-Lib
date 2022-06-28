@@ -1,12 +1,12 @@
 import React from 'react';
 import DefaultList from './DefaultList';
-import classes from '../../main.module.css';
+import classes from '../../../main.module.css';
 import ListOfLoaders from './ListOfLoaders';
 import SingleLoader from './SingleLoader';
 import { loaders } from './data';
 import DeafaultItem from './DeafaultItem';
 
-const TagsTable = ({ loading, data, title }) => {
+const Index = ({ loading, data, title }) => {
   return (
     <div className={`${classes.members} basis-1/3`}>
       {loading ? (
@@ -38,4 +38,4 @@ const TagsTable = ({ loading, data, title }) => {
   );
 };
 
-export default TagsTable;
+export default Index;

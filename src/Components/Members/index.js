@@ -1,13 +1,11 @@
 import { Stack } from '@mui/material';
 import React from 'react';
-import { m1, m2, m3, m4 } from './data';
 import MembersList from './MembersList';
 import SingleImgLoader from './SingleImgLoader';
 import SingleMemberImg from './SingleMemberImg';
 import classes from '../../main.module.css';
-import DefaultHeader from '../Common/DefaultHeader';
-
-const mems = [m1, m2, m3, m4];
+import DefaultHeader from '../Common/TagsTable/DefaultHeader';
+const mems = [1, 2, 3, 4];
 
 const index = ({ loading }) => {
   return (
@@ -24,7 +22,7 @@ const index = ({ loading }) => {
           </Stack>
         ) : (
           mems.map((m) => {
-            return <SingleMemberImg src={m} alt={'member'} />;
+            return <SingleMemberImg />;
           })
         )}
       </MembersList>

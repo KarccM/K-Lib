@@ -1,6 +1,6 @@
 import React from 'react';
-import { s } from '../Members/data';
 import Skeleton from '@mui/material/Skeleton';
+import AvatarGenerators from '../Common/AvatarGenerators';
 
 const loadingColor = 'FFF20098';
 const loadingStyle = { 'background-color': `#FFF20098` };
@@ -33,11 +33,7 @@ const Supervisor = ({ name, section, opi }) => {
     <div className="flex flex-col justify-center items-center gap-y-2 my-2">
       {name ? (
         <>
-          <img
-            src={s}
-            className={'rounded-full w-40 h-40'}
-            alt={'DR.' + name}
-          />
+          <AvatarGenerators />
           <h1 className="text-3xl text-gray-900">
             {name} : {section}
           </h1>

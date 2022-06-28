@@ -1,5 +1,5 @@
 import React from 'react';
-import setRandomStyle from '../../CustomHooks/setRandomStyle';
+import setRandomStyle from '../../../CustomHooks/setRandomStyle';
 
 const DeafaultItem = ({ item }) => {
   console.log('lang rendered');
