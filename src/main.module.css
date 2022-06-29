@@ -4,12 +4,15 @@
 
 :root { 
     --background-color: #F5F5F5;
-    --color:#303841
+    --color:#303841;
+    --comment:#F5F5F595;
+
 }
 
 [data-theme="dark"] {
     --color: #F5F5F5;
     --background-color: #303841;
+    --comment:#30384195;
 
 }
 
@@ -20,12 +23,12 @@ body{
 .nav{
     color:#000;
     background-color: #FFF200;
-    
     display: flex;
 }
 .nav .logo{
     color:#FFF200;
     background-color: #000;
+    font-size: 3rem;
 }
 
 .nav .item {
@@ -35,7 +38,7 @@ body{
     padding-bottom: 0.25rem;
     margin-left: 0.5rem ;
     margin-right: 0.5rem ;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     line-height: 1.75rem;
     border-radius: 1.5rem;
     border-color: rgb(0 0 0);
@@ -60,6 +63,7 @@ body{
     background-color: #D6E6F271;
     margin-right: 1rem;
     text-align: center;
+    border-radius: 0.5rem;
 }
 
 .right{
@@ -70,11 +74,13 @@ body{
     background-color: #D6E6F271;
     padding: 0.75rem;
     margin-bottom: 2rem;
+    border-radius: 0.5rem;
 }
 .downSection{
     padding: 0.5rem;
     background-color: #FFF200;
     display: flex;
+    border-radius: 0.5rem;
 }
 
 .headItem {
@@ -83,7 +89,7 @@ body{
     padding: 2rem 1rem 2rem 1rem;
     margin-left: auto;
     margin-right: auto;
-    font-size: 2.25rem;
+    font-size: 2.75rem;
     line-height: 2.5rem;
 }
 .members{
@@ -94,14 +100,15 @@ body{
     align-items: center;
     background: #F5F5F598;
     margin: 1rem;
+    border-radius: 0.5rem;
 }
 .singleComment{
-    background:  var(--background-color);
+    background: var(--comment);
     display: block;
     border-bottom-width: 1px;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
     padding-right: 0.5rem;
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -109,7 +116,7 @@ body{
 }
 .Rating{
     color:#303841;
-    font-size: 2rem;
+    font-size: 2.75rem;
 }
 .members .icon{
     color:#303841;
@@ -123,9 +130,30 @@ body{
     border-radius: 0.375rem;
     font-weight: 700;
     border-width: 1px;
+    border-color: #9d9fa2;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     margin-right: 1rem;
+    background-color:#F5F5F5;
+}
+
+.comment_btn{
+    color: var(--color);
+    border-radius: 0.375rem;
+    font-weight: 700;
+    border-width: 1px;
+    border-color: #9d9fa2;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    margin-right: 1rem;
+    background-color:var(--background-color);
+    width: 100%;
+    font-size: 20px;
+}
+.comment_btn:hover{
+    background:#FFF20098;
 }

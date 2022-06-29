@@ -18,7 +18,7 @@ const RightSide = () => {
     <div className={`${classes.downSection}`}>
       <Members loading={loading} />
       <LanguageSection langs={langs} loading={loading} />
-      <Rating />
+      <Rating rate={6.5} />
     </div>
   );
 };

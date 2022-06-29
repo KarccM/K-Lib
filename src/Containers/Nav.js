@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { s } from '../Components/Members/data';
 import classes from '../main.module.css';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import AvatarGenerators from '../Components/Common/AvatarGenerators';
 
 const style = `transition hover:scale-110 duration-200 ${classes.item}`;
 const Nav = () => {
@@ -10,7 +10,7 @@ const Nav = () => {
     <div className={`${classes.nav}`}>
       <div className={`${classes.section} justify-center`}>
         <div
-          className={`w-1/3 text-center text-4xl rounded-2xl px-2 bg-black font-bold py-2 my-4 ${classes.logo}`}
+          className={`w-2/5 text-center rounded-2xl px-2 bg-black font-bold py-2 my-4 ${classes.logo}`}
         >
           ITE-Library
         </div>
@@ -41,7 +41,7 @@ const Nav = () => {
         >
           <DarkModeIcon fontSize="large" />
         </button>
-        <img src={s} alt="user" className={`${classes.profile_img}`} />
+        <AvatarGenerators styles={`${classes.profile_img}`} />
       </div>
     </div>
   );

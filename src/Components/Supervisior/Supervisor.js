@@ -33,11 +33,11 @@ const Supervisor = ({ name, section, opi }) => {
     <div className="flex flex-col justify-center items-center gap-y-2 my-2">
       {name ? (
         <>
-          <AvatarGenerators />
-          <h1 className="text-3xl text-gray-900">
+          <AvatarGenerators info={{ sex: 'man' }} />
+          <h1 className="text-4xl text-gray-900">
             {name} : {section}
           </h1>
-          <div className="px-2">{opi}</div>
+          <div className="p-4 text-xl">{opi}</div>
         </>
       ) : (
         <>

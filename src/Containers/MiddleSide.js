@@ -15,16 +15,6 @@ const MiddleSide = () => {
         year: '2021-2022',
         description: {
           idea: 'Create Engilsh Teacher For Accent Train, You Can Learn Alot OF Accent Like American,British ...',
-          resource: [
-            {
-              name: 'Github',
-              link: 'github.com/fakeApp/ForFun',
-            },
-            {
-              name: 'Paper',
-              link: "paperwithcode.com/MadEngilsh/don'tOpenTheLink",
-            },
-          ],
         },
       });
     }, 2000);
@@ -33,13 +23,15 @@ const MiddleSide = () => {
   return (
     <div className={`${classes.upperSection}`}>
       {details ? (
-        <>
-          <Header year={details.year} title={details.title} />
-          <Description description={details.description}>
+        <div className="p-6">
+          <div div className="flex pb-10">
+            <Header year={details.year} title={details.title} />
             <ReactElements />
+          </div>
+          <Description description={details.description}>
             <Comments />
           </Description>
-        </>
+        </div>
       ) : (
         <Loading />
       )}

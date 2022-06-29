@@ -31,7 +31,7 @@ const Comments = () => {
         })}
         {seeMore && (
           <button
-            className={`hover:text-white  hover:bg-gray-400 transition duration-300 hover:scale-110 hover:font-bold ${classes.react_btn}`}
+            className={`${classes.comment_btn}`}
             onClick={loadMoreComment}
           >
             {label}
