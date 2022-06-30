@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import classes from '../main.module.css';
 import TextField from '@mui/material/TextField';
 
 const Rating = ({ rate }) => {
   const [editMode, setEditMode] = useState(false);
   const [rating, setRating] = useState(rate);
+  const inref = useRef();
+  useEffect(() => {
+    if (editMode) inref.current.focus();
+  }, [editMode]);
   return (
     <div
       className={`${classes.members} basis-1/3`}
-      onMouseLeave={() => {
+      onBlur={() => {
         setEditMode(false);
       }}
     >
@@ -25,6 +29,7 @@ const Rating = ({ rate }) => {
               fontSize: 34,
             }}
             variant="standard"
+            inputRef={inref}
           />
         </>
       ) : (

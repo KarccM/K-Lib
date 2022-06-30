@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Supervisor from '../Components/Supervisior/index';
 import TagsSection from '../Components/TagsFeatures/index';
-const LeftSide = () => {
+const LeftBar = () => {
   console.log('left rendered');
 
   const [tags, setTags] = useState([]);
@@ -36,4 +36,4 @@ const LeftSide = () => {
   );
 };
 
-export default LeftSide;
+export default LeftBar;

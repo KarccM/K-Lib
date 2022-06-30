@@ -1,10 +1,9 @@
 import React from 'react';
-import LeftSide from './Containers/LeftSide';
-import RightSide from './Containers/RightSide';
-import MiddleSide from './Containers/MiddleSide';
+import DownSection from './Containers/DownSection';
+import LeftBar from './Containers/LeftBar';
 import Nav from './Containers/Nav';
+import UpSection from './Containers/UpSection';
 import classes from './main.module.css';
-// import RefEx from './Containers/RefEx';
 
 // Assume i know post-id then i should pass it as props for components
 // Assume i don't have loading for each comp
@@ -14,14 +13,13 @@ const App = () => {
       <Nav />
       <div className="grid grid-cols-4 p-20">
         <div className={`${classes.left}`}>
-          <LeftSide />
+          <LeftBar />
         </div>
         <div className={`col-span-3 ${classes.right}`}>
-          <MiddleSide />
-          <RightSide />
+          <UpSection />
+          <DownSection />
         </div>
       </div>
-      {/* <RefEx /> */}
     </>
   );
 };

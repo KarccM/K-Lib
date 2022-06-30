@@ -3,7 +3,7 @@ import Members from '../Components/Members/index';
 import classes from '../main.module.css';
 import LanguageSection from '../Components/LanguagesFeature/index';
 import Rating from '../Components/Rating';
-const RightSide = () => {
+const DownSection = () => {
   const [loading, setLoading] = useState(true);
   const [langs, setLangs] = useState([]);
 
@@ -23,4 +23,4 @@ const RightSide = () => {
   );
 };
 
-export default RightSide;
+export default DownSection;

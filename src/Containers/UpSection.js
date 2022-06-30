@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../Components/Header';
 import Description from '../Components/Description';
-import Comments from '../Components/Comments';
-import ReactElements from '../Components/ReactElements';
+import Comments from '../Components/Comments/index';
 import Loading from '../Components/Loading';
 import classes from '../main.module.css';
+import PostReactions from '../Components/PostReactions';
 
-const MiddleSide = () => {
+const UpSection = () => {
   const [details, setDetails] = useState();
   useEffect(() => {
     setTimeout(() => {
@@ -26,7 +26,7 @@ const MiddleSide = () => {
         <div className="p-6">
           <div div className="flex pb-10">
             <Header year={details.year} title={details.title} />
-            <ReactElements />
+            <PostReactions />
           </div>
           <Description description={details.description}>
             <Comments />
@@ -39,4 +39,4 @@ const MiddleSide = () => {
   );
 };
 
-export default MiddleSide;
+export default UpSection;

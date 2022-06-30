@@ -15,14 +15,14 @@ const index = ({ loading }) => {
         {loading ? (
           <Stack>
             <div className="flex flex-row -space-x-1.5">
-              {mems.map(() => {
-                return <SingleImgLoader />;
+              {mems.map((idx) => {
+                return <SingleImgLoader key={idx} />;
               })}
             </div>
           </Stack>
         ) : (
-          mems.map((m) => {
-            return <SingleMemberImg />;
+          mems.map((idx) => {
+            return <SingleMemberImg key={idx} />;
           })
         )}
       </MembersList>

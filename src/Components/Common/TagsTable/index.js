@@ -16,6 +16,7 @@ const Index = ({ loading, data, title }) => {
               {loaders.map(({ variant, width, height }) => {
                 return (
                   <SingleLoader
+                    key={width + height}
                     variant={variant}
                     width={width}
                     height={height}

@@ -49,6 +49,7 @@ const Supervisor = ({ name, section, opi }) => {
                 width={width}
                 height={height}
                 className={className}
+                key={width + height}
               />
             );
           })}

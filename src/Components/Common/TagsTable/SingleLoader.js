@@ -6,7 +6,6 @@ const SingleLoader = ({ width, variant, height }) => {
     <Skeleton
       variant={variant}
       width={width}
-      key={width + height}
       height={height}
       className={'my-auto'}
     />
