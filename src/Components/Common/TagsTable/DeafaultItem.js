@@ -2,7 +2,6 @@ import React from 'react';
 import setRandomStyle from '../../../CustomHooks/setRandomStyle';
 
 const DeafaultItem = ({ item }) => {
-  console.log('lang rendered');
   const style = setRandomStyle();
   return (
     <button

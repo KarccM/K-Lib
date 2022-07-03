@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Description = ({ description, children }) => {
-  console.log('description rendered');
   const { idea } = description;
   return (
     <div>

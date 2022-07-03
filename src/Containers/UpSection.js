@@ -19,7 +19,6 @@ const UpSection = () => {
       });
     }, 2000);
   }, []);
-  console.log('middle rendered');
   return (
     <div className={`${classes.upperSection}`}>
       {details ? (

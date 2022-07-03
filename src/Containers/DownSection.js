@@ -13,7 +13,6 @@ const DownSection = () => {
       setLoading(false);
     }, 2000);
   }, []);
-  console.log('right side rendered');
   return (
     <div className={`${classes.downSection}`}>
       <Members loading={loading} />

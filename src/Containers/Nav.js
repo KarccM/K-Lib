@@ -8,9 +8,9 @@ const Nav = () => {
   const [theme, setTheme] = useState('light');
   return (
     <div className={`${classes.nav}`}>
-      <div className={`${classes.section} justify-center`}>
+      <div className={`${classes.section} justify-start`}>
         <div
-          className={`w-2/5 text-center rounded-2xl px-2 bg-black font-bold py-2 my-4 ${classes.logo}`}
+          className={`w-auto ml-4 text-center rounded-2xl px-2 bg-black font-bold py-2 my-4 ${classes.logo}`}
         >
           ITE-Library
         </div>

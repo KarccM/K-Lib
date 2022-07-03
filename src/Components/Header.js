@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Header = ({ title, year }) => {
-  console.log('header rendered');
   return (
     <div className="text-center w-2/3 flex items-end">
       <h1 className="text-6xl">{title}</h1>

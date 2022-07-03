@@ -124,20 +124,6 @@ body{
     height: 3.5rem;
     border-radius: 9999px;
 }
-.react_btn{
-    /* background-color :var(--background-color); */
-    color: #303841;
-    border-radius: 0.375rem;
-    font-weight: 700;
-    border-width: 1px;
-    border-color: #9d9fa2;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    margin-right: 1rem;
-    background-color:#F5F5F5;
-}
 
 .comment_btn{
     color: var(--color);
@@ -156,4 +142,9 @@ body{
 }
 .comment_btn:hover{
     background:#FFF20098;
+}
+
+.content{
+    width: 80%;
+    margin: auto;
 }
