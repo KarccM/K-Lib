@@ -12,18 +12,18 @@ const Nav = () => {
         <div
           className={`w-auto ml-4 text-center rounded-2xl px-2 bg-black font-bold py-2 my-4 ${classes.logo}`}
         >
-          ITE-Library
+          Riot-Valorant
         </div>
       </div>
       <div className={`${classes.section} justify-center`}>
         <button className={style} key={'home'}>
-          Home
+          Agents
         </button>
         <button className={style} key={'about'}>
           About
         </button>
         <button className={style} key={'projects'}>
-          Projects
+          Maps
         </button>
       </div>
       <div className={`${classes.section} justify-end pr-6`}>

@@ -1,14 +1,11 @@
 import React from 'react';
-import AvatarGenerators from '../Common/AvatarGenerators';
 
-const Supervisor = ({ name, section, opi }) => {
+const Supervisor = ({ displayName, displayIconSmall, description }) => {
   return (
     <>
-      <AvatarGenerators info={{ sex: 'man' }} />
-      <h1 className="text-4xl text-gray-900">
-        {name} : {section}
-      </h1>
-      <div className="p-4 text-xl">{opi}</div>
+      <img src={displayIconSmall} alt={displayName} />
+      <h1 className="text-4xl text-gray-900">{displayName}</h1>
+      <div className="p-4 text-xl">{description}</div>
     </>
   );
 };

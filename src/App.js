@@ -44,7 +44,7 @@ const App = () => {
             <Nav />
             <div className="grid grid-cols-4 py-10">
               <div className={`${classes.left}`}>
-                <LeftBar />
+                <LeftBar uuid={agent.uuid} />
               </div>
               <div className={`col-span-3 ${classes.right}`}>
                 <UpSection />

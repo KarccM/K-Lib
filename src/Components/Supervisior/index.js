@@ -4,11 +4,11 @@ import classes from '../../main.module.css';
 import Loading from './Loading';
 import FuncComponent from '../HOC/FuncComponent';
 
-const index = ({ author }) => {
+const index = ({ uuid }) => {
   const meta = {
     loading: <Loading />,
     active: (props) => <Supervisor {...props} />,
-    url: `https://openlibrary.org/authors/${author}`,
+    url: `https://valorant-api.com/v1/agents/${uuid}`,
   };
 
   return (
@@ -17,6 +17,7 @@ const index = ({ author }) => {
         <FuncComponent
           loadingComponent={meta.loading}
           activeComponent={meta.active}
+          url={meta.url}
         />
       </div>
     </div>
