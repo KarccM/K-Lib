@@ -4,9 +4,8 @@ import LeftBar from './Containers/LeftBar';
 import Nav from './Containers/Nav';
 import UpSection from './Containers/UpSection';
 import classes from './main.module.css';
-import { DataFetcher } from './Components/ApiClient';
+import { DataFetcherwithLocalStorage } from './Components/ApiClient';
 import VCard from './Containers/VCard';
-import LocalStorage from './CustomHooks/useLocalStorage';
 
 const App = () => {
   const [agents, setAgents] = useState([]);
@@ -16,10 +15,6 @@ const App = () => {
     for (const ag of agents) {
       if (ag.uuid === e) {
         setAgent(ag);
-        LocalStorage({
-          key: 'agent',
-          data: agent,
-        });
         break;
       }
     }
@@ -27,7 +22,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    DataFetcher({
+    DataFetcherwithLocalStorage({
       successCb: (agents) => {
         console.log(`agents`, agents);
         setAgents(agents);
@@ -36,10 +31,6 @@ const App = () => {
         console.log(`err`, err);
       },
       url: 'https://valorant-api.com/v1/agents',
-    });
-    LocalStorage({
-      key: 'agents',
-      data: agents,
     });
   }, []);
   return (
@@ -59,7 +50,7 @@ const App = () => {
             </div>
           </>
         ) : (
-          <div className="grid grid-cols-4 gap-y-10 justify-center item">
+          <div className="grid grid-cols-4 gap-y-10 justify-center item bg-gray-200">
             {agents.map((agent) => {
               return (
                 <VCard

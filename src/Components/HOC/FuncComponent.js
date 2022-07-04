@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { DataFetcher } from '../ApiClient/index';
+import { DataFetcherwithLocalStorage } from '../ApiClient/index';
 
 const FuncComponent = (props) => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   useEffect(() => {
-    DataFetcher({
+    DataFetcherwithLocalStorage({
       successCb: (data) => {
         setData(data);
         setLoading(false);

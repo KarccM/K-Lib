@@ -1,4 +1,7 @@
+import { useState } from 'react';
 import axios from 'axios';
+import useLocalStorage from '../../CustomHooks/useLocalStorage';
+
 export const axiosInstance = axios.create({
   headers: {
     'Access-Control-Allow-Headers': 'Access-Control-Allow-Headers',
@@ -11,6 +14,8 @@ export const DataFetcher = ({ successCb, errorCb, url }) => {
   axiosInstance
     .get(url)
     .then((agent) => {
+      console.log(`agent`, agent);
+      console.log(`successCb`, successCb);
       successCb(agent?.data?.data);
     })
     .catch((err) => {
@@ -20,13 +25,26 @@ export const DataFetcher = ({ successCb, errorCb, url }) => {
 
 export const DataFetcherWithTimeOut = ({ successCb, errorCb, url }) => {
   setTimeout(() => {
-    axiosInstance
-      .get(url)
-      .then((agent) => {
-        successCb(agent?.data?.data);
-      })
-      .catch((err) => {
-        errorCb(err);
-      });
+    DataFetcher({ successCb, errorCb, url });
   }, 2000);
+};
+
+export const DataFetcherwithLocalStorage = ({ successCb, errorCb, url }) => {
+  let localValue = localStorage.getItem(url)
+    ? JSON.parse(localStorage.getItem(url))
+    : false;
+  if (localValue) {
+    successCb(localValue);
+  } else {
+    DataFetcher({
+      successCb: (data) => {
+        localStorage.setItem(url, JSON.stringify(data));
+        successCb(data);
+      },
+      errorCb: (err) => {
+        console.log(`err`, err);
+      },
+      url: url,
+    });
+  }
 };
