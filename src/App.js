@@ -6,6 +6,7 @@ import UpSection from './Containers/UpSection';
 import classes from './main.module.css';
 import { DataFetcher } from './Components/ApiClient';
 import VCard from './Containers/VCard';
+import LocalStorage from './CustomHooks/useLocalStorage';
 
 const App = () => {
   const [agents, setAgents] = useState([]);
@@ -15,6 +16,10 @@ const App = () => {
     for (const ag of agents) {
       if (ag.uuid === e) {
         setAgent(ag);
+        LocalStorage({
+          key: 'agent',
+          data: agent,
+        });
         break;
       }
     }
@@ -31,6 +36,10 @@ const App = () => {
         console.log(`err`, err);
       },
       url: 'https://valorant-api.com/v1/agents',
+    });
+    LocalStorage({
+      key: 'agents',
+      data: agents,
     });
   }, []);
   return (
