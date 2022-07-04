@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Header = ({ title, year }) => {
+const Header = ({ name, role }) => {
   return (
-    <div className="text-center w-2/3 flex items-end">
-      <h1 className="text-6xl">{title}</h1>
-      <span className="ml-2 text-2xl text-gray-500">{year}</span>
+    <div className="w-2/3">
+      <h1 className="text-6xl mb-4">{name}:</h1>
+      <span className="text-2xl text-gray-500">ROLE : {role}</span>
     </div>
   );
 };

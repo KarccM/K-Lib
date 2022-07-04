@@ -1,41 +1,49 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Header from '../Components/Header';
 import Description from '../Components/Description';
 import Comments from '../Components/Comments/index';
 import Loading from '../Components/Loading';
 import classes from '../main.module.css';
 import PostReactions from '../Components/PostReactions';
+import FuncComponent from '../Components/HOC/FuncComponent';
 
-const UpSection = () => {
-  const [details, setDetails] = useState();
-  useEffect(() => {
-    setTimeout(() => {
-      setDetails({
-        title: 'Accent Teacher',
-        year: '2021-2022',
-        description: {
-          idea: 'Create Engilsh Teacher For Accent Train, You Can Learn Alot OF Accent Like American,British ...',
-        },
-      });
-    }, 2000);
-  }, []);
+const UpSection = ({ uuid }) => {
+  const meta = {
+    loading: <Loading />,
+    active: (props) => (
+      <>
+        {console.log(`props`, props)}
+        <Main
+          role={props.role.description}
+          name={props.displayName}
+          description={props.description}
+        />
+      </>
+    ),
+    url: `https://valorant-api.com/v1/agents/${uuid}`,
+  };
+
   return (
     <div className={`${classes.upperSection}`}>
-      {details ? (
-        <div className="p-6">
-          <div div className="flex pb-10">
-            <Header year={details.year} title={details.title} />
-            <PostReactions />
-          </div>
-          <Description description={details.description}>
-            <Comments />
-          </Description>
-        </div>
-      ) : (
-        <Loading />
-      )}
+      <FuncComponent
+        loadingComponent={meta.loading}
+        activeComponent={meta.active}
+        url={meta.url}
+      />
     </div>
   );
 };
-
+const Main = ({ role, description, name }) => {
+  return (
+    <div className="p-6">
+      <div div className="flex pb-10">
+        <Header role={role} name={name} />
+        <PostReactions />
+      </div>
+      <Description description={description}>
+        <Comments />
+      </Description>
+    </div>
+  );
+};
 export default UpSection;

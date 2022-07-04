@@ -1,6 +1,4 @@
-import { useState } from 'react';
 import axios from 'axios';
-import useLocalStorage from '../../CustomHooks/useLocalStorage';
 
 export const axiosInstance = axios.create({
   headers: {
@@ -14,8 +12,6 @@ export const DataFetcher = ({ successCb, errorCb, url }) => {
   axiosInstance
     .get(url)
     .then((agent) => {
-      console.log(`agent`, agent);
-      console.log(`successCb`, successCb);
       successCb(agent?.data?.data);
     })
     .catch((err) => {

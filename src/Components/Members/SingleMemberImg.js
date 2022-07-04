@@ -1,10 +1,11 @@
 import React from 'react';
 import classes from '../../main.module.css';
-import AvatarGenerators from '../Common/AvatarGenerators';
-const SingleMemberImg = () => {
+const SingleMemberImg = ({ src, alt }) => {
   return (
-    <AvatarGenerators
-      styles={`${classes.icon} hover:ring-4 hover:ring-yellow-400`}
+    <img
+      className={`${classes.icon} hover:ring-4 hover:ring-yellow-400`}
+      src={src}
+      alt={alt}
     />
   );
 };

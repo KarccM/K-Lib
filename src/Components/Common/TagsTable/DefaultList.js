@@ -5,7 +5,7 @@ const DefaultList = ({ title, children }) => {
   return (
     <>
       <DefaultHeader title={title} />
-      <div>{children}</div>
+      <div className="flex">{children}</div>
     </>
   );
 };

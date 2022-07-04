@@ -3,13 +3,10 @@ import SingleComment from './SingleComment';
 import classes from '../../main.module.css';
 
 function* generator() {
-  yield 'This is So Hot :D';
-  yield 'Best Project i have ever Seen!!!';
-  yield 'Sound Value Good Luck';
-  yield 'i won iphone 11 follow this link and get one for ur self www.jake.net/fake';
-  yield 'if u want to have a girlfriend like my comment';
-  yield 'im real vampire and ill rise the world';
-  yield 'Some content';
+  yield 'OP Champs plz nerf him';
+  yield 'nice champs but i hate him';
+  yield 'ill put him i A tier';
+  yield 'ggs , trash game';
 }
 
 const gen = generator();

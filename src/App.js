@@ -24,7 +24,6 @@ const App = () => {
   useEffect(() => {
     DataFetcherwithLocalStorage({
       successCb: (agents) => {
-        console.log(`agents`, agents);
         setAgents(agents);
       },
       errorCb: (err) => {
@@ -44,8 +43,8 @@ const App = () => {
                 <LeftBar uuid={agent.uuid} />
               </div>
               <div className={`col-span-3 ${classes.right}`}>
-                <UpSection />
-                <DownSection />
+                <UpSection uuid={agent.uuid} />
+                <DownSection uuid={agent.uuid} />
               </div>
             </div>
           </>
