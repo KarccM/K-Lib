@@ -1,24 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { DataFetcher } from '../ApiClient/index';
 
 const FuncComponent = (props) => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   useEffect(() => {
-    setTimeout(() => {
-      axios
-        .get(props.url, {
-          header: {
-            'Access-Control-Allow-Headers': 'Access-Control-Allow-Headers',
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'application/json',
-          },
-        })
-        .then((agent) => {
-          setData(agent?.data?.data);
-        });
-      setLoading(false);
-    }, 2000);
+    DataFetcher({
+      successCb: (data) => {
+        setData(data);
+        setLoading(false);
+      },
+      errorCb: (err) => {
+        console.log(`err`, err);
+      },
+      url: props.url,
+    });
   }, []);
   return <>{loading ? props.loadingComponent : props.activeComponent(data)}</>;
 };

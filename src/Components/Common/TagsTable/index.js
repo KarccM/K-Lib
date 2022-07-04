@@ -13,10 +13,10 @@ const Index = ({ loading, data, title }) => {
         <div>
           <ListOfLoaders spacing={1} title={title}>
             <div className="flex gap-x-2 px-6">
-              {loaders.map(({ variant, width, height }) => {
+              {loaders.map(({ variant, width, height }, index) => {
                 return (
                   <SingleLoader
-                    key={width + height}
+                    key={index}
                     variant={variant}
                     width={width}
                     height={height}
@@ -29,8 +29,8 @@ const Index = ({ loading, data, title }) => {
       ) : (
         <>
           <DefaultList title={title}>
-            {data.map((item) => {
-              return <DeafaultItem item={item} />;
+            {data.map((item, index) => {
+              return <DeafaultItem item={item} key={index} />;
             })}
           </DefaultList>
         </>

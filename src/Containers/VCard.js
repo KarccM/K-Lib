@@ -7,7 +7,7 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 
 const VCard = ({ uuid, src, name, desc, handleInfo }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, margin: 'auto' }}>
       <CardActionArea>
         <CardMedia
           component="img"

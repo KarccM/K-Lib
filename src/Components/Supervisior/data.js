@@ -10,14 +10,14 @@ export const skeletons = [
     className: '',
   },
   {
-    style: { 'background-color': `#${loadingColor}` },
+    style: { backgroundColor: `#${loadingColor}` },
     width: 190,
     height: 30,
     variant: 'text',
     className: '',
   },
   {
-    style: { 'background-color': `#${loadingColor}` },
+    style: { backgroundColor: `#${loadingColor}` },
     width: 250,
     height: 140,
     variant: 'rectangular',

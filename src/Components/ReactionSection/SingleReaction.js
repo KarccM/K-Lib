@@ -12,17 +12,14 @@ const SingleReaction = ({ state, def_state, active_state, name }) => {
         setBtnState(!btnState);
       }}
       sx={{
-        'background-color': '#F5F5F5',
+        bgcolor: '#F5F5F5',
         color: '#303841',
-        'border-radius': '0.375rem',
-        'font-weight': '700',
-        'border-width': '1px',
-        'border-color': '#9d9fa2',
-        'padding-left': '0.5rem',
-        'padding-right': '0.5rem',
-        'padding-top': '0.5rem',
-        'padding-bottom': '0.5rem',
-        'margin-right': '1rem',
+        borderRadius: '0.375rem',
+        fontWeight: '700',
+        borderWidth: '1px',
+        borderColor: '#9d9fa2',
+        p: '0.5rem',
+        mr: '1rem',
       }}
     >
       {btnState ? def_state : active_state}
