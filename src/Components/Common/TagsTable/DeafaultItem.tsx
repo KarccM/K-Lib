@@ -1,13 +1,15 @@
 import { Avatar } from '@mui/material';
-import React from 'react';
 import setRandomStyle from '../../../CustomHooks/setRandomStyle';
+import { ItemTypeObject } from './Types';
 
-const DeafaultItem = ({ item }) => {
+const DeafaultItem = ({ item }:ItemTypeObject) =>
+{
   const style = setRandomStyle();
+  console.log(`item`, item)
   return (
     <>
       {typeof item !== 'string' ? (
-        <Avatar src={item.displayIcon} alt={item.displayName} />
+        <Avatar src={item?.displayIcon} alt={item?.displayName} />
       ) : (
         <button
           className={`rounded-md mx-1 px-2 py-2 inline-block my-2 ` + style}

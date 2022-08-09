@@ -1,7 +1,11 @@
 import React from 'react';
 import classes from '../../../main.module.css';
 
-const DefaultHeader = ({ title }) => {
+type Props = {
+  title:string
+}
+
+const DefaultHeader = ({ title }:Props) => {
   return <h1 className={`${classes.headItem}`}>{title}</h1>;
 };
 

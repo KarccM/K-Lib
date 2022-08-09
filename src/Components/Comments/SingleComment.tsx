@@ -3,13 +3,16 @@ import classes from '../../main.module.css';
 import { love } from '../ReactionSection/Data';
 import SingleReaction from '../ReactionSection/SingleReaction';
 
-const SingleComment = ({ comment }) => {
+type Props = { 
+  comment:string  
+}
+const SingleComment = ({ comment } : Props) => {
   return (
     <div className={`${classes.singleComment}`}>
       <div>Unknown : </div>
       <div>{comment}</div>
       <div className=" justify-end">
-        <SingleReaction
+        <SingleReaction 
           state={love.state}
           def_state={love.def_state}
           active_state={love.active_state}

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Members from '../Components/Members/index';
 import classes from '../main.module.css';
-import LanguageSection from '../Components/LanguagesFeature/index';
+import AbilitySection from '../Components/Ability/index';
 import Rating from '../Components/Rating';
 import { DataFetcher } from '../Components/ApiClient';
 const DownSection = ({ uuid }) => {
   const [loading, setLoading] = useState(true);
-  const [langs, setLangs] = useState([]);
+  const [abilities, setLangs] = useState([]);
 
   useEffect(() => {
     DataFetcher({
@@ -20,7 +20,7 @@ const DownSection = ({ uuid }) => {
   return (
     <div className={`${classes.downSection}`}>
       <Members />
-      <LanguageSection langs={langs} loading={loading} />
+      <AbilitySection abilities={abilities} loading={loading} />
       <Rating rate={9.5} />
     </div>
   );

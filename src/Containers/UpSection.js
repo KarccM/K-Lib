@@ -12,7 +12,6 @@ const UpSection = ({ uuid }) => {
     loading: <Loading />,
     active: (props) => (
       <>
-        {console.log(`props`, props)}
         <Main
           role={props.role.description}
           name={props.displayName}

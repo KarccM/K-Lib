@@ -3,18 +3,24 @@ import StarIcon from '@mui/icons-material/Star';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-export const love = {
+interface ReactBtn {
+  name: string;
+  state: boolean;
+  def_state: JSX.Element;
+  active_state: JSX.Element;
+}
+export const love : ReactBtn = {
   name: 'love',
   state: false,
   def_state: <FavoriteIcon sx={{ color: '#F00' }} />,
   active_state: <FavoriteBorderIcon sx={{ color: '#F00' }} />,
 };
 
-export const star = {
+export const star : ReactBtn = {
   name: 'star',
   state: false,
   def_state: <StarIcon sx={{ color: '#303841' }} />,
   active_state: <StarOutlineIcon sx={{ color: '#303841' }} />,
 };
 
-export const postReaction = [love, star];
+export const postReaction : ReactBtn[] = [love, star];

@@ -10,22 +10,23 @@ function* generator() {
 }
 
 const gen = generator();
+
 const Index = () => {
   const loadMoreComment = () => {
-    let value = gen.next().value;
-    let value2 = gen.next().value;
+    let value : string|void = gen.next().value;
+    let value2 : string|void= gen.next().value;
     setLabel('Load More!');
     if (value && value2) setComments([...comments, value, value2]);
     else setSeeMore(false);
   };
-  const [comments, setComments] = useState([]);
-  const [label, setLabel] = useState('Show Comments!');
-  const [seeMore, setSeeMore] = useState(true);
+  const [comments, setComments] :any = useState([]);
+  const [label, setLabel] :any = useState('Show Comments!');
+  const [seeMore, setSeeMore]:any = useState(true);
 
   return (
     comments && (
       <div>
-        {comments.map((comment, idx) => {
+        {comments.map((comment : string, idx:number) => {
           return <SingleComment comment={comment} key={idx} />;
         })}
         {seeMore && (

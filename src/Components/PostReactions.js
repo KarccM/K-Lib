@@ -1,6 +1,6 @@
 import React from 'react';
 import { postReaction } from './ReactionSection/Data';
-import SingleReaction from './ReactionSection/SingleReaction';
+import SingleReaction from './ReactionSection/SingleReaction.tsx';
 
 const PostReactions = () => {
   return (

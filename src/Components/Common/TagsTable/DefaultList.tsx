@@ -1,7 +1,10 @@
 import React from 'react';
 import DefaultHeader from './DefaultHeader';
-
-const DefaultList = ({ title, children }) => {
+type Props = {
+  title:string,
+  children:React.ReactNode
+}
+const DefaultList = ({ title, children }:Props) => {
   return (
     <>
       <DefaultHeader title={title} />
