@@ -6,7 +6,7 @@ const DeafaultItem = ({ item }) => {
   const style = setRandomStyle();
   return (
     <>
-      {typeof item !== String ? (
+      {typeof item !== 'string' ? (
         <Avatar src={item.displayIcon} alt={item.displayName} />
       ) : (
         <button

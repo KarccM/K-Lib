@@ -5,7 +5,7 @@ const DefaultList = ({ title, children }) => {
   return (
     <>
       <DefaultHeader title={title} />
-      <div className="flex">{children}</div>
+      <div className="flex flex-wrap justify-center">{children}</div>
     </>
   );
 };
